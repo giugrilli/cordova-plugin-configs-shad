@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<plugin id="cordova-plugin-configs-shad" version="0.1.1" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>Custom Configs Shad</name>
+    <author>Giuseppe Grilli</author>
+    <description>Cordova / PhoneGap Plugin that adds custom configs</description>
+    <keywords>cordova, ios, android, app, security, transport, http, https, ats,
+        ssl, tls, nsapptransportsecurity, nsallowsarbitraryloads</keywords>
+    <license>MIT</license>
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+    <platform name="ios">
+        <config-file target="*-Info.plist" parent="NSAppTransportSecurity">
+            <dict>
+                <key>NSAllowsArbitraryLoads</key>
+                <true/>
+                <key>NSExceptionDomains</key>
+                <dict>
+                    <key>www.oreegano.com</key>
+                    <dict>
+                        <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                        <false/>
+                        <key>NSIncludesSubdomains</key>
+                        <true/>
+                    </dict>
+                    <key>facebook.com</key>
+                    <dict>
+                        <key>NSIncludesSubdomains</key>
+                        <true/>                
+                        <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                        <false/>
+                    </dict>
+                    <key>fbcdn.net</key>
+                    <dict>
+                        <key>NSIncludesSubdomains</key>
+                        <true/>
+                        <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                        <false/>
+                    </dict>
+                    <key>akamaihd.net</key>
+                    <dict>
+                        <key>NSIncludesSubdomains</key>
+                        <true/>
+                        <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                        <false/>
+                    </dict>                    
+                    <key>LSApplicationQueriesSchemes</key>
+                    <array>
+                        <string>fbapi</string>
+                        <string>fbapi20130214</string>
+                        <string>fbapi20130410</string>
+                        <string>fbapi20130702</string>
+                        <string>fbapi20131010</string>
+                        <string>fbapi20131219</string>    
+                        <string>fbapi20140410</string>
+                        <string>fbapi20140116</string>
+                        <string>fbapi20150313</string>
+                        <string>fbapi20150629</string>
+                        <string>fbauth</string>
+                        <string>fbauth2</string>
+                        <string>fb-messenger-api20140430</string>
+                    </array>
+                </dict>
+            </dict>
+        </config-file>
+    </platform>
+    <platform name="android">
+    </platform>F
+</plugin>
