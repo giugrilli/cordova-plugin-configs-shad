@@ -65,5 +65,8 @@
         </config-file>
     </platform>
     <platform name="android">
-    </platform>F
+        <config-file target="AndroidManifest.xml" parent="/*>
+            <supports-screens android:xlargeScreens="false"/>
+        </config-file>
+    </platform>
 </plugin>
