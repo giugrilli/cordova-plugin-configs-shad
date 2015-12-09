@@ -16,52 +16,57 @@
                 <true/>
                 <key>NSExceptionDomains</key>
                 <dict>
-                    <key>www.oreegano.com</key>
-                    <dict>
-                        <key>NSExceptionAllowsInsecureHTTPLoads</key>
-                        <false/>
-                        <key>NSIncludesSubdomains</key>
-                        <true/>
-                    </dict>
                     <key>facebook.com</key>
                     <dict>
-                        <key>NSIncludesSubdomains</key>
-                        <true/>                
-                        <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-                        <false/>
-                    </dict>
-                    <key>fbcdn.net</key>
-                    <dict>
-                        <key>NSIncludesSubdomains</key>
-                        <true/>
-                        <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                        <key>NSIncludesSubdomains</key> 
+                        <true/>        
+                        <key>NSThirdPartyExceptionRequiresForwardSecrecy</key> 
                         <false/>
                     </dict>
                     <key>akamaihd.net</key>
                     <dict>
+                        <key>NSIncludesSubdomains</key> 
+                        <true/>
+                        <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>  
+                        <false/>
+                    </dict>
+                    <key>cloudinary.com</key>
+                    <dict>
                         <key>NSIncludesSubdomains</key>
                         <true/>
-                        <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                    </dict>
+                    <key>fbcdn.net</key>
+                    <dict>
+                        <key>NSIncludesSubdomains</key> 
+                        <true/>
+                        <key>NSThirdPartyExceptionRequiresForwardSecrecy</key> 
                         <false/>
-                    </dict>                    
-                    <key>LSApplicationQueriesSchemes</key>
-                    <array>
-                        <string>fbapi</string>
-                        <string>fbapi20130214</string>
-                        <string>fbapi20130410</string>
-                        <string>fbapi20130702</string>
-                        <string>fbapi20131010</string>
-                        <string>fbapi20131219</string>    
-                        <string>fbapi20140410</string>
-                        <string>fbapi20140116</string>
-                        <string>fbapi20150313</string>
-                        <string>fbapi20150629</string>
-                        <string>fbauth</string>
-                        <string>fbauth2</string>
-                        <string>fb-messenger-api20140430</string>
-                    </array>
+                    </dict>
+                    <key>oreegano.com</key>
+                    <dict>
+                        <key>NSIncludesSubdomains</key>
+                        <true/>
+                    </dict>
                 </dict>
             </dict>
+        </config-file>
+        <config-file target="*-Info.plist">
+            <key>LSApplicationQueriesSchemes</key>
+            <array>
+                <string>fbapi</string>
+                <string>fbapi20130214</string>
+                <string>fbapi20130410</string>
+                <string>fbapi20130702</string>
+                <string>fbapi20131010</string>
+                <string>fbapi20131219</string>    
+                <string>fbapi20140410</string>
+                <string>fbapi20140116</string>
+                <string>fbapi20150313</string>
+                <string>fbapi20150629</string>
+                <string>fbauth</string>
+                <string>fbauth2</string>
+                <string>fb-messenger-api20140430</string>
+            </array>
         </config-file>
     </platform>
     <platform name="android">
