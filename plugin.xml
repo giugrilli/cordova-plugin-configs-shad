@@ -50,8 +50,7 @@
                 </dict>
             </dict>
         </config-file>
-        <config-file target="*-Info.plist">
-            <key>LSApplicationQueriesSchemes</key>
+        <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
             <array>
                 <string>fbapi</string>
                 <string>fbapi20130214</string>
